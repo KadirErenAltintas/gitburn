@@ -1,0 +1,1 @@
+{"version":3,"file":"burnoutEngine.d.ts","sourceRoot":"","sources":["burnoutEngine.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,YAAY,EAAE,MAAM,iBAAiB,CAAC;AAE/C,MAAM,WAAW,aAAa;IAC5B,KAAK,EAAE,MAAM,CAAC;IACd,OAAO,EAAE,MAAM,EAAE,CAAC;IAClB,OAAO,EAAE,MAAM,CAAC;CACjB;AAED,qBAAa,aAAa;IACxB,OAAO,CAAC,UAAU,EAAE,YAAY,EAAE,GAAG,aAAa;IAoFlD,OAAO,CAAC,eAAe;CAaxB"}
