@@ -39,6 +39,24 @@ export const TRANSLATIONS = {
     riskModerate: "MODERATE",
     riskLow: "LOW",
     copyToast: "✨ Copied to clipboard!",
+    mascotName: "GRUMBLE",
+    mascotHint: "tap for chaos",
+    mascotIdle:
+      "I'm Grumble. Type a GitHub @ — I'll sniff the heat off your commits.",
+    mascotLoading: "Fetching events… my eyes are melting in a good way.",
+    mascotError: "That request went sideways. Backend awake? Try again.",
+    mascotScoreZero:
+      "Zero heat on the radar. Either you're chilling hard or you're a ghost repo.",
+    mascotScoreLow: "Low heat. You're basically a wellness influencer with a keyboard.",
+    mascotScoreMid: "Mid heat — not on fire yet, but the stove is definitely on.",
+    mascotScoreHigh: "High heat. Your keyboard needs a fire extinguisher.",
+    mascotScoreCritical: "CRITICAL. If sleep was a PR, you'd have 200 open conflicts.",
+    mascotEasterTriple: "SECRET UNLOCKED: You found the triple-tap ritual. Legend.",
+    mascotEasterOctocat:
+      "OCTOCAT DETECTED. The demo account judges your life choices anyway.",
+    mascotTap1: "Stop poking. I'm not a debugger.",
+    mascotTap2: "Okay fine — one more commit joke and I'm clocking out.",
+    mascotTap3: "Touch count exceeded. Deploying emotional damage.",
   },
   tr: {
     language: "Dil",
@@ -78,6 +96,27 @@ export const TRANSLATIONS = {
     riskModerate: "ORTA",
     riskLow: "DUSUK",
     copyToast: "✨ Panoya kopyalandi!",
+    mascotName: "GRUMBLE",
+    mascotHint: "kaosa dokun",
+    mascotIdle:
+      "Ben Grumble. Bir GitHub @ yaz — commitlerinin isisini koklayayim.",
+    mascotLoading: "Event'leri cekiyorum… gozlerim guzel bir sekilde eriyor.",
+    mascotError: "Istek patladi. Backend ayakta mi? Tekrar dene.",
+    mascotScoreZero:
+      "Radarda sifir isi. Ya cok rahatsin ya da hayalet reposun.",
+    mascotScoreLow:
+      "Dusuk isi. Klavyeli bir wellness influencer gibisin neredeyse.",
+    mascotScoreMid: "Orta isi — henuz alev yok ama ocak acik.",
+    mascotScoreHigh: "Yuksek isi. Klavyene yangin tupu lazim.",
+    mascotScoreCritical:
+      "KRITIK. Uyku bir PR olsa, 200 acik conflict'in var.",
+    mascotEasterTriple:
+      "GIZLI KILIT: Uc dokunuş rituelini buldun. Efsane.",
+    mascotEasterOctocat:
+      "OCTOCAT ALGILANDI. Demo hesap bile hayat secimlerini yargiliyor.",
+    mascotTap1: "Dokunma. Ben debug konsolu degilim.",
+    mascotTap2: "Tamam — bir commit sakasi daha, sonra mesai bitiyor.",
+    mascotTap3: "Dokunma limiti asildi. Duygusal hasar deploy ediliyor.",
   },
 } as const;
 

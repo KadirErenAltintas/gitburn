@@ -62,22 +62,24 @@ export function generateShareText(
         ? "Ilginc kodlama kaliplari"
         : "Interesting coding patterns";
 
+  const handle = username.trim() ? `@${username.trim()}` : "@github";
+
   if (locale === "tr") {
-    return `Tukenmislik skorum ${score}% ${emoji}
+    return `${handle} — tukenmislik isisi: ${score}% ${emoji}
 
 ${mainSignal}
 
-Kisilik: ${personality}
+Tip: ${personality}
 
 GitBurn ile analiz edildi 🔥
 gitburn.dev`;
   }
 
-  return `My burnout score is ${score}% ${emoji}
+  return `${handle} — burnout heat: ${score}% ${emoji}
 
 ${mainSignal}
 
-Personality: ${personality}
+Type: ${personality}
 
 Analyzed with GitBurn 🔥
 gitburn.dev`;
@@ -91,10 +93,11 @@ export function generateTwitterText(
   locale: Locale = "en"
 ): string {
   const emoji = getRiskEmoji(score);
+  const handle = username.trim() ? `@${username.trim()}` : "@github";
   let text =
     locale === "tr"
-      ? `Tukenmislik skorum: ${score}% ${emoji}\n`
-      : `My burnout score: ${score}% ${emoji}\n`;
+      ? `${handle} tukenmislik: ${score}% ${emoji}\n`
+      : `${handle} burnout: ${score}% ${emoji}\n`;
   text += locale === "tr" ? `Tip: ${personality}\n` : `Type: ${personality}\n`;
 
   if (signals.length > 0) {

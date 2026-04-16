@@ -1,5 +1,5 @@
-import { Card } from "@/components/ui/card";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import ScoreDisplay from "./ScoreDisplay";
 import ShareButtons from "./ShareButtons";
 import ModeToggle from "./ModeToggle";
@@ -17,6 +17,7 @@ interface ResultCardProps {
   signals: string[];
   personality: string;
   summary: string;
+  onVoiceModeChange?: (mode: FunMode) => void;
 }
 
 export default function ResultCard({
@@ -25,9 +26,14 @@ export default function ResultCard({
   signals,
   personality,
   summary,
+  onVoiceModeChange,
 }: ResultCardProps) {
   const { locale, t } = useLanguage();
   const [mode, setMode] = useState<FunMode>("normal");
+
+  useEffect(() => {
+    onVoiceModeChange?.(mode);
+  }, [mode, onVoiceModeChange]);
 
   const formattedSignals = formatSignals(signals);
   const modeMessages = generateModeMessages(score, personality, signals, mode, locale);
@@ -59,8 +65,11 @@ export default function ResultCard({
   const skin = modeSkin[mode];
 
   return (
-    <div
-      className={`space-y-6 terminal-panel p-4 md:p-6 animate-in fade-in slide-in-from-bottom-4 duration-300 ${skin.frame}`}
+    <motion.div
+      initial={{ opacity: 0, y: 28 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ type: "spring", stiffness: 220, damping: 24 }}
+      className={`space-y-6 terminal-panel p-4 md:p-6 ${skin.frame}`}
     >
       {/* Score Card */}
       <ScoreDisplay score={score} mode={mode} />
@@ -138,6 +147,6 @@ export default function ResultCard({
 
       {/* Share Section */}
       <ShareButtons shareText={shareText} twitterText={twitterText} mode={mode} />
-    </div>
+    </motion.div>
   );
 }
